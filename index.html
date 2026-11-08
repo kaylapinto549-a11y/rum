@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rumbo Aventura | Travel & Experiences</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a href="#inicio" class="brand">
+    <span class="brand-symbol">R.</span>
+    <span>RUMBO AVENTURA<small>TRAVEL & EXPERIENCES</small></span>
+  </a>
+  <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+  <nav id="nav">
+    <a href="#inicio">Inicio</a>
+    <a href="#destinos">Destinos</a>
+    <a href="#experiencia">Experiencias</a>
+    <a href="#cotizador">Cotizador</a>
+    <a href="#contacto" class="nav-contact">Hablemos ↗</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-image"></div>
+  <div class="hero-copy">
+    <span class="overline">DESCUBRE · SUEÑA · VIAJA</span>
+    <h1>Hay un mundo<br>esperando por <i>ti.</i></h1>
+    <p>Escápate de la rutina. Descubre destinos extraordinarios y convierte cada viaje en una historia inolvidable.</p>
+    <a href="#destinos" class="dark-button">Explorar el mundo <span>↗</span></a>
+    <div class="hero-bottom">01 — 09 <span>DESTINOS PARA DESCUBRIR</span></div>
+  </div>
+  <div class="hero-photo-label">
+    <span>01 / TRAVEL COLLECTION</span>
+    <strong>Vive lo<br>extraordinario.</strong>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="intro-number">RA / 2026</div>
+  <div>
+    <span class="overline olive">UNA NUEVA FORMA DE VIAJAR</span>
+    <h2>No colecciones cosas.<br><i>Colecciona momentos.</i></h2>
+  </div>
+  <p>Desde playas escondidas hasta ciudades llenas de historia. Tenemos un destino perfecto para cada aventura.</p>
+</section>
+
+<section class="destinations" id="destinos">
+  <div class="section-top">
+    <div>
+      <span class="overline olive">NUESTRA SELECCIÓN</span>
+      <h2>Elige tu próximo <i>destino.</i></h2>
+      <p>Lugares que merecen estar en tu lista de sueños.</p>
+    </div>
+    <div class="destination-count">09 <span>LUGARES ÚNICOS</span></div>
+  </div>
+
+  <div class="search-bar">
+    <span>⌕</span>
+    <input id="search" type="search" placeholder="¿Qué lugar quieres descubrir?">
+    <button id="searchBtn">Buscar ↗</button>
+  </div>
+
+  <div class="filters">
+    <button class="filter active" data-filter="todos">Todos los destinos</button>
+    <button class="filter" data-filter="nacional">Colombia</button>
+    <button class="filter" data-filter="internacional">Internacionales</button>
+  </div>
+
+  <div class="travel-grid" id="travelGrid"></div>
+  <p id="emptyMessage" hidden class="empty">No encontramos ese destino. Prueba con otro nombre.</p>
+</section>
+
+<section class="experience" id="experiencia">
+  <div class="experience-photo">
+    <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1200&q=85" alt="Playa tropical">
+    <div class="photo-caption">EL MUNDO ES TUYO · 2026</div>
+  </div>
+  <div class="experience-copy">
+    <span class="overline">MÁS QUE UN VIAJE</span>
+    <h2>Una aventura que comienza con un <i>sí.</i></h2>
+    <p>En Rumbo Aventura queremos que cada persona encuentre su manera de descubrir el mundo. Creamos experiencias para disfrutar, explorar y conectar con nuevos lugares.</p>
+    <div class="experience-item">
+      <span>01</span>
+      <div><b>Nuestra misión</b><p>Crear experiencias turísticas memorables, con atención cercana y opciones para diferentes viajeros.</p></div>
+    </div>
+    <div class="experience-item">
+      <span>02</span>
+      <div><b>Nuestra visión</b><p>Ser una agencia reconocida por inspirar a más personas a conocer Colombia y el mundo.</p></div>
+    </div>
+    <a href="#cotizador" class="text-link">PLANEA TU EXPERIENCIA ↗</a>
+  </div>
+</section>
+
+<section class="detail-area" id="detalle">
+  <span class="overline olive">INSPÍRATE ANTES DE PARTIR</span>
+  <h2>Explora cada <i>rincón.</i></h2>
+  <div id="detailBox" class="detail-box">
+    <div class="detail-empty">
+      <span>✧</span>
+      <h3>Tu historia comienza aquí</h3>
+      <p>Elige «Descubrir» en uno de nuestros destinos para conocerlo mejor.</p>
+    </div>
+  </div>
+</section>
+
+<section class="quote-area" id="cotizador">
+  <div class="quote-copy">
+    <span class="overline">TU PRÓXIMA AVENTURA</span>
+    <h2>Haz tus maletas.<br><i>Nosotros hacemos las cuentas.</i></h2>
+    <p>Calcula un presupuesto estimado según el destino, las personas, las noches y el alojamiento que prefieras.</p>
+    <div class="quote-note"><span>✳</span> Tu viaje, tus decisiones, tu aventura.</div>
+  </div>
+
+  <div class="quote-card">
+    <div class="quote-card-head">
+      <span>RA.</span>
+      <div><b>COTIZADOR DE VIAJES</b><small>PLANEA TU EXPERIENCIA</small></div>
+    </div>
+    <form id="quoteForm">
+      <label for="destination">Destino</label>
+      <select id="destination" required></select>
+      <div class="two-fields">
+        <div>
+          <label for="people">Viajeros</label>
+          <input id="people" type="number" min="1" max="20" value="2" required>
+        </div>
+        <div>
+          <label for="nights">Noches</label>
+          <input id="nights" type="number" min="1" max="30" value="3" required>
+        </div>
+      </div>
+      <label for="hotel">Alojamiento</label>
+      <select id="hotel">
+        <option value="economico">Esencial · Económico</option>
+        <option value="estandar" selected>Confort · Estándar</option>
+        <option value="lujo">Premium · Lujo</option>
+      </select>
+      <button type="submit" class="quote-button">Calcular presupuesto ↗</button>
+    </form>
+    <div class="quote-result" id="quoteResult">
+      <small>PRESUPUESTO ESTIMADO</small>
+      <strong id="total">$0</strong>
+      <p id="description">Completa tus datos para calcular tu aventura.</p>
+      <span>*Precios ilustrativos sujetos a confirmación.</span>
+    </div>
+  </div>
+</section>
+
+<section class="contact-area" id="contacto">
+  <div class="contact-heading">
+    <span class="overline">HABLEMOS DE TU PRÓXIMO VIAJE</span>
+    <h2>El mundo es demasiado grande para <i>quedarse en casa.</i></h2>
+    <p>Cuéntanos a dónde quieres ir. Estamos listos para ayudarte a planearlo.</p>
+    <div class="contact-mark">RUMBO AVENTURA · VIAJA A TU MANERA</div>
+  </div>
+  <form id="contactForm" class="contact-card">
+    <h3>Escríbenos</h3>
+    <p>Solicita información y asesoría personalizada.</p>
+    <label for="name">Nombre completo</label>
+    <input id="name" type="text" placeholder="Tu nombre" required>
+    <label for="phone">Teléfono</label>
+    <input id="phone" type="tel" placeholder="Tu número de contacto" required>
+    <label for="contactDestination">Destino de interés</label>
+    <select id="contactDestination" required></select>
+    <label for="message">Mensaje</label>
+    <textarea id="message" rows="3" placeholder="Cuéntanos cómo imaginas tu viaje..."></textarea>
+    <button type="submit" class="quote-button">Continuar por WhatsApp ↗</button>
+  </form>
+</section>
+</main>
+
+<footer>
+  <a href="#inicio" class="brand footer-brand">
+    <span class="brand-symbol">R.</span>
+    <span>RUMBO AVENTURA<small>TRAVEL & EXPERIENCES</small></span>
+  </a>
+  <p>El mundo está lleno de historias. Sal a descubrir la tuya.</p>
+  <div class="footer-nav">
+    <a href="#inicio">Inicio</a>
+    <a href="#destinos">Destinos</a>
+    <a href="#experiencia">Nosotros</a>
+    <a href="#cotizador">Cotizador</a>
+  </div>
+  <small>© 2026 Rumbo Aventura · Todos los derechos reservados.</small>
+</footer>
+
+<a href="#contacto" class="whatsapp-float" aria-label="Contactar">✆</a>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
